@@ -224,7 +224,7 @@ end
 if game:GetService('CoreGui'):FindFirstChild('RobloxPromptGui') then
 	game:GetService('CoreGui').RobloxPromptGui.DescendantAdded:Connect(function(v)
 		if v:IsA('TextLabel') and string.find(string.lower(v.Text), "internet") then
-			sendWebhook()
+			sendWebhook("serverhop", webhook)
 			game:GetService("TeleportService"):Teleport(game.PlaceId, lplr)
 		end
 	end)
