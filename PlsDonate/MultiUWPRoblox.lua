@@ -131,7 +131,7 @@ function sendWebhook(context, webhook)
 	end
 end
 local speedMultiplier = robuxRaised + 20
-local webhook = "%s"
+local webhook = getgenv and getgenv().webhook ~= nil and getgenv().webhook or "%s"
 local updateMessages = {
 	"Donate me robux to make my character spin faster!",
 	"+ 1 R$ = * 1.2 spinning speed"
